@@ -2727,7 +2727,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1127338052}
   - component: {fileID: 1127338054}
-  - component: {fileID: 1127338056}
   - component: {fileID: 1127338059}
   - component: {fileID: 1127338057}
   m_Layer: 0
@@ -2771,22 +2770,6 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.19, z: 0}
---- !u!114 &1127338056
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1127338051}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc0a1fb562abc9147b942b1b55a14c0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0
-  rotationSpeed: 720
-  jumpSpeed: 5
-  jumpButtonGracePeriod: 1
 --- !u!95 &1127338057
 Animator:
   serializedVersion: 4
