@@ -13,6 +13,10 @@ public class ThirdPersonMovement : MonoBehaviour
     public float turnSmoothTime = 0.1f;
     float turnSmoothVelocity;
 
+    //Jump speed and gravity
+    public float jumpSpeed;
+    private float ySpeed;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +33,14 @@ public class ThirdPersonMovement : MonoBehaviour
         //storing direction 
         //normalize : if we press down two keys at the same time so the speed is not doubled
         Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
+
+        //Adds physics to jumping
+        ySpeed += Physics.gravity.y * Time.deltaTime;
+
+        if (Input.GetButtonDown("Jump"))
+        {
+            ySpeed = jumpSpeed;
+        }
 
         //if we're moving in any direction
         if(direction.magnitude >= 0.1f)
