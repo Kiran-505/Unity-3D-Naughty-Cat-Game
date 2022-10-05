@@ -27,6 +27,7 @@ public class ThirdPersonMovement : MonoBehaviour
 
     Vector3 velocity;
     bool isGrounded;
+    public bool isEating = false;
 
     // Start is called before the first frame update
     void Start()
@@ -41,8 +42,9 @@ public class ThirdPersonMovement : MonoBehaviour
     {
         // Check if player collides with the ground
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
-        animator.SetBool("is_walking", false);
 
+        animator.SetBool("is_walking", false);
+        
         // if cat is on ground and is not jumping, then set the height to -1
         if (isGrounded && velocity.y < 0)
         {
@@ -69,7 +71,7 @@ public class ThirdPersonMovement : MonoBehaviour
 
 
         //if we're moving in any direction
-        if(direction.magnitude >= 0.1f)
+        if(direction.magnitude >= 0.1f && !isEating)
         {
             // if cat is on ground then play walking animation
             if (isGrounded)
