@@ -447,14 +447,14 @@ MonoBehaviour:
   m_LookaheadIgnoreY: 0
   m_HorizontalDamping: 0
   m_VerticalDamping: 0
-  m_ScreenX: 0.5126847
-  m_ScreenY: 0.51193297
-  m_DeadZoneWidth: 0
-  m_DeadZoneHeight: 0.0015910899
+  m_ScreenX: 0.5173826
+  m_ScreenY: 0.6798121
+  m_DeadZoneWidth: 0.0013422819
+  m_DeadZoneHeight: 0
   m_SoftZoneWidth: 0.8084561
   m_SoftZoneHeight: 0.4913292
   m_BiasX: 0
-  m_BiasY: 0
+  m_BiasY: -0.19700003
   m_CenterOnActivate: 1
 --- !u!114 &166774828
 MonoBehaviour:
@@ -948,8 +948,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GoodFoods:
   - {fileID: 1103729609193184, guid: 071442191d88e82409a92c7c3738890f, type: 3}
+  - {fileID: 9214264865057824323, guid: 50b35115666f69b4e92558e93f797172, type: 3}
+  - {fileID: 6835296257010947104, guid: f334c318ba205304c9476a73f1c866cd, type: 3}
+  - {fileID: 6206855511138506879, guid: 14196850ca9671846a98266aae9b1c2b, type: 3}
+  - {fileID: 900775499213583583, guid: 81ac1152ad59df94cb7195fe785461eb, type: 3}
+  - {fileID: 2229785620828939041, guid: ce8dae8a44d4c014dbada2b1d654776c, type: 3}
+  - {fileID: 8287487587063442581, guid: a798fc4195ca98241b14ab915b31d7b6, type: 3}
+  - {fileID: 5397861306999560526, guid: a8932a74597059b438a08f0e95093b76, type: 3}
+  - {fileID: 6727403956258397260, guid: a0c105fe6b4056c40b62047ade68924f, type: 3}
   BadFoods:
+  - {fileID: 7672154142157855658, guid: 1ec4f9be7d2ce504aa24aecaee541b05, type: 3}
   - {fileID: 8993215387919012114, guid: 79df570663a25084594130aa2bb9ac33, type: 3}
+  - {fileID: 2138421270473040916, guid: 0fd52d41b98243f4abee9e84d3fa6336, type: 3}
+  - {fileID: 4421555877624214429, guid: 7735c291b8d71e9419dfed24fe3d8edd, type: 3}
 --- !u!4 &358743009
 Transform:
   m_ObjectHideFlags: 0
@@ -1104,7 +1115,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 393356891}
-  m_LocalRotation: {x: 0.16345885, y: -0.015114564, z: 0.0025045942, w: 0.9864312}
+  m_LocalRotation: {x: 0.103255816, y: -0.028208135, z: 0.0029294968, w: 0.9942505}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2168,7 +2179,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 851807039}
-  m_LocalRotation: {x: 0.13184035, y: -0.000000021492014, z: 0.0000000028584664, w: 0.991271}
+  m_LocalRotation: {x: 0.13184032, y: -0.000000019478794, z: 0.000000002590705, w: 0.991271}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -5605,7 +5616,7 @@ PrefabInstance:
     - target: {fileID: 808951036470690111, guid: 49f576a03ece56a4e9c640ed081f6a68, type: 3}
       propertyPath: Player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1127338052}
     - target: {fileID: 808951036471924506, guid: 49f576a03ece56a4e9c640ed081f6a68, type: 3}
       propertyPath: m_Layer
       value: 3
@@ -5981,7 +5992,7 @@ PrefabInstance:
     - target: {fileID: 808951036730664955, guid: 49f576a03ece56a4e9c640ed081f6a68, type: 3}
       propertyPath: Player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1127338052}
     - target: {fileID: 808951036736956149, guid: 49f576a03ece56a4e9c640ed081f6a68, type: 3}
       propertyPath: m_Layer
       value: 3
@@ -6273,7 +6284,7 @@ PrefabInstance:
     - target: {fileID: 808951036907045938, guid: 49f576a03ece56a4e9c640ed081f6a68, type: 3}
       propertyPath: Player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1127338052}
     - target: {fileID: 808951036907046092, guid: 49f576a03ece56a4e9c640ed081f6a68, type: 3}
       propertyPath: m_Layer
       value: 3
@@ -6931,9 +6942,13 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 808951037331085882, guid: 49f576a03ece56a4e9c640ed081f6a68, type: 3}
+      propertyPath: open
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 808951037331085882, guid: 49f576a03ece56a4e9c640ed081f6a68, type: 3}
       propertyPath: Player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1127338052}
     - target: {fileID: 808951037336216853, guid: 49f576a03ece56a4e9c640ed081f6a68, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -7939,9 +7954,13 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 808951037950962513, guid: 49f576a03ece56a4e9c640ed081f6a68, type: 3}
+      propertyPath: open
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 808951037950962513, guid: 49f576a03ece56a4e9c640ed081f6a68, type: 3}
       propertyPath: Player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1127338052}
     - target: {fileID: 808951037950962515, guid: 49f576a03ece56a4e9c640ed081f6a68, type: 3}
       propertyPath: m_Layer
       value: 3
@@ -8521,7 +8540,7 @@ PrefabInstance:
     - target: {fileID: 808951038280784757, guid: 49f576a03ece56a4e9c640ed081f6a68, type: 3}
       propertyPath: Player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1127338052}
     - target: {fileID: 808951038280784759, guid: 49f576a03ece56a4e9c640ed081f6a68, type: 3}
       propertyPath: m_Layer
       value: 3
@@ -9189,7 +9208,7 @@ PrefabInstance:
     - target: {fileID: 4460734771437978233, guid: 49f576a03ece56a4e9c640ed081f6a68, type: 3}
       propertyPath: Player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1127338052}
     - target: {fileID: 4460734771437978234, guid: 49f576a03ece56a4e9c640ed081f6a68, type: 3}
       propertyPath: m_Layer
       value: 3
@@ -9249,7 +9268,7 @@ PrefabInstance:
     - target: {fileID: 5483098436186490723, guid: 49f576a03ece56a4e9c640ed081f6a68, type: 3}
       propertyPath: Player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1127338052}
     - target: {fileID: 5483098436186490732, guid: 49f576a03ece56a4e9c640ed081f6a68, type: 3}
       propertyPath: m_Layer
       value: 3
