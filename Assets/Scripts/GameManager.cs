@@ -53,6 +53,11 @@ public class GameManager : MonoBehaviour
         return gameOver;
     }
 
+    public void SetGameOver(bool over)
+    {
+        gameOver = over;
+    }
+
     // Returns number of remaining lives
     public int RemainingLives()
     {

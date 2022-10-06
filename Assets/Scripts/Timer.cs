@@ -91,7 +91,7 @@ public class Timer : MonoBehaviour
         {
             flashTimer -= Time.deltaTime;
             SetTextDisplay(false);
-            Debug.Log("Game over");
+            GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().SetGameOver(true);
         }
     }
 
