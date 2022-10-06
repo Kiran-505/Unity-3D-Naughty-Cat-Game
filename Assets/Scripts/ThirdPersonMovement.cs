@@ -32,6 +32,9 @@ public class ThirdPersonMovement : MonoBehaviour
     //Makes it so that you can add a jump sound
     public SoundManager soundManager;
 
+    //Adds particles when jumping
+    public ParticleSystem jumpParticles;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -72,6 +75,7 @@ public class ThirdPersonMovement : MonoBehaviour
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -1.0f * gravity);
             soundManager.PlayJumpSound();
+            jumpParticles.Play();
         }
 
 
