@@ -17,7 +17,7 @@ public class EatingFood : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("is_eating: " + player.animator.GetBool("is_eating") + " is_walking: " + player.animator.GetBool("is_walking"));
+
     }
 
     private void OnTriggerEnter(Collider other)

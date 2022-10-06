@@ -43,6 +43,7 @@ public class ThirdPersonMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         // Check if player collides with the ground
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 

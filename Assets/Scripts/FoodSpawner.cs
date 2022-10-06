@@ -31,7 +31,6 @@ public class FoodSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
 
     private void PopulateFoodLocationsArray()
