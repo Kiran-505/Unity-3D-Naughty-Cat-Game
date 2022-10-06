@@ -35,9 +35,6 @@ public class ThirdPersonMovement : MonoBehaviour
     // Game manager
     public GameManager gameManager;
 
-    //Adds particles when jumping
-    public ParticleSystem jumpParticles;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -50,9 +47,10 @@ public class ThirdPersonMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Check if game is over or not
         if (gameManager.GameOver())
         {
-            Debug.Log("Game Over");
+            // Show game over screen
             gameManager.ShowGameOverScreen();
             return;
         }
@@ -79,12 +77,11 @@ public class ThirdPersonMovement : MonoBehaviour
         controller.Move(velocity * Time.deltaTime);
 
         //Adds physics to jumping
-
+        // Only jump if cat is on ground and is not eating the food already
         if (Input.GetButtonDown("Jump") && isGrounded && !isEating)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -1.0f * gravity);
             soundManager.PlayJumpSound();
-            jumpParticles.Play();
         }
 
 

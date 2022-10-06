@@ -26,12 +26,14 @@ public class EatingFood : MonoBehaviour
         string tag = other.gameObject.tag;
         if (tag == "GoodFood" || tag == "BadFood")
         {
+            // Delete the food and start playing cat animation for sitting
             Destroy(other.gameObject);
             StartCoroutine(WaitAndDeleteFood());
 
             if (tag == "GoodFood")
             {
                 player.soundManager.PlayGoodFoodSound();
+                player.gameManager.AddCurrentGoodFood();
                 goodFoodParticle.Play();
             }
             else
@@ -47,10 +49,9 @@ public class EatingFood : MonoBehaviour
     {
         player.animator.SetBool("is_eating", true);
         player.isEating = true;
-        Debug.Log("Eating Started");
         
         yield return new WaitForSeconds(eatingDuration);
-        Debug.Log("Eating Finished");
+
         player.animator.SetBool("is_eating", false);
         player.isEating = false;
     }

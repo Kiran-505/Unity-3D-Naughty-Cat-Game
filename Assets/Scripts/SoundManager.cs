@@ -24,16 +24,19 @@ public class SoundManager : MonoBehaviour
         
     }
 
+    // Plays the jump sound
     public void PlayJumpSound()
     {
         playerAudio.PlayOneShot(jumpSound, soundVolume);
     }
 
+    // Plays the good food sound
     public void PlayGoodFoodSound()
     {
         playerAudio.PlayOneShot(goodFoodSound, soundVolume);
     }
 
+    // Plays the bad food sound
     public void PlayBadFoodSound()
     {
         playerAudio.PlayOneShot(badFoodSound, soundVolume);

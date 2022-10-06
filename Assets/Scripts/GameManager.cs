@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     public int MaximumLives = 3;
+    public int GoodFoodCount = 10;
     private int currentLives;
+    private int currentGoodFoodCount;
     private bool gameOver = false;
 
     private UIManager uiManager;
@@ -25,12 +28,15 @@ public class GameManager : MonoBehaviour
         
     }
 
+    // Resets all the variables
     public void ResetGame()
     {
         currentLives = MaximumLives;
+        currentGoodFoodCount = 0;
         gameOver = false;
     }
 
+    // Decreases life when cat eats bad food
     public void DecreaseLife()
     {
         if (currentLives == 1)
@@ -41,18 +47,32 @@ public class GameManager : MonoBehaviour
         uiManager.SetLivesImage(currentLives);
     }
 
+    // Returns if game is over or not
     public bool GameOver()
     {
         return gameOver;
     }
 
+    // Returns number of remaining lives
     public int RemainingLives()
     {
         return currentLives;
     }
 
+    // Show the gameover screen using UI manager
     public void ShowGameOverScreen()
     {
         uiManager.ShowGameOverScreen();
+    }
+
+    // Increment good food count and update the score
+    public void AddCurrentGoodFood()
+    {
+        currentGoodFoodCount++;
+        if (currentGoodFoodCount == GoodFoodCount)
+        {
+            gameOver = true;
+        }
+        uiManager.SetScore(currentGoodFoodCount);
     }
 }
