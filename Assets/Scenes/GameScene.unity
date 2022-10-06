@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18113923, g: 0.22253856, b: 0.28306785, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1122,7 +1122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6001f941d650664fb9459102d8a5f27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timerDuration: 200
+  timerDuration: 90
   firstMinute: {fileID: 1287368290}
   secondMinute: {fileID: 1820264953}
   separator: {fileID: 2075056206}
@@ -1354,7 +1354,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 393356891}
-  m_LocalRotation: {x: 0.26572075, y: -0.018347647, z: 0.0050581405, w: 0.9638622}
+  m_LocalRotation: {x: 0.26572087, y: -0.018332658, z: 0.005054009, w: 0.9638625}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2728,7 +2728,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 851807039}
-  m_LocalRotation: {x: 0.2933649, y: 0.000000023262835, z: -0.000000007138593, w: 0.95600057}
+  m_LocalRotation: {x: 0.2933649, y: -0.000000023262839, z: 0.0000000071385946, w: 0.95600057}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -6402,7 +6402,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2028063701
 Transform:
   m_ObjectHideFlags: 0
@@ -9126,7 +9126,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 808951037656818318, guid: 49f576a03ece56a4e9c640ed081f6a68, type: 3}
       propertyPath: m_Name
-      value: Structure 01
+      value: Apartment
       objectReference: {fileID: 0}
     - target: {fileID: 808951037656818318, guid: 49f576a03ece56a4e9c640ed081f6a68, type: 3}
       propertyPath: m_Layer
