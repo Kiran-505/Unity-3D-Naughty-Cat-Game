@@ -6,6 +6,7 @@ TagManager:
   tags:
   - GoodFood
   - BadFood
+  - Particle
   layers:
   - Default
   - TransparentFX

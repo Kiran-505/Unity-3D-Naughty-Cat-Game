@@ -9,6 +9,8 @@ public class EatingFood : MonoBehaviour
 
     public AudioClip eatingSound;
     private AudioSource playerAudio;
+
+    public ParticleSystem eatingParticle;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +21,6 @@ public class EatingFood : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         Debug.Log("is_eating: " + player.animator.GetBool("is_eating") + " is_walking: " + player.animator.GetBool("is_walking"));
     }
 
@@ -27,11 +28,11 @@ public class EatingFood : MonoBehaviour
     {
         if (other.gameObject.CompareTag("GoodFood") || other.gameObject.CompareTag("BadFood"))
         {
-
             Debug.Log(other.gameObject.tag);
             Destroy(other.gameObject);
             StartCoroutine(WaitAndDeleteFood());
             playerAudio.PlayOneShot(eatingSound, 2.0f);
+            eatingParticle.Play();
         }
     }
 
@@ -40,6 +41,7 @@ public class EatingFood : MonoBehaviour
         player.animator.SetBool("is_eating", true);
         player.isEating = true;
         Debug.Log("Eating Started");
+        
         yield return new WaitForSeconds(eatingDuration);
         Debug.Log("Eating Finished");
         player.animator.SetBool("is_eating", false);
