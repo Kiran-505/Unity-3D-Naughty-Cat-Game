@@ -7,7 +7,8 @@ public class EatingFood : MonoBehaviour
     public ThirdPersonMovement player;
     public int eatingDuration = 3;
 
-    public ParticleSystem eatingParticle;
+    public ParticleSystem badFoodParticle;
+    public ParticleSystem goodFoodParticle;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,13 +23,23 @@ public class EatingFood : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("GoodFood") || other.gameObject.CompareTag("BadFood"))
+        string tag = other.gameObject.tag;
+        if (tag == "GoodFood" || tag == "BadFood")
         {
-            Debug.Log(other.gameObject.tag);
             Destroy(other.gameObject);
             StartCoroutine(WaitAndDeleteFood());
-            player.soundManager.PlayFoodSound();
-            eatingParticle.Play();
+
+            if (tag == "GoodFood")
+            {
+                player.soundManager.PlayGoodFoodSound();
+                goodFoodParticle.Play();
+            }
+            else
+            {
+                player.soundManager.PlayBadFoodSound();
+                player.gameManager.DecreaseLife();
+                badFoodParticle.Play();
+            }
         }
     }
 

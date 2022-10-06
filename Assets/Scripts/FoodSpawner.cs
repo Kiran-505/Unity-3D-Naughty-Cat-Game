@@ -38,7 +38,7 @@ public class FoodSpawner : MonoBehaviour
         // Defining food locations
         foodLocations.Add(new Vector3(-2.856f, 1.526f, 5.722f));
         foodLocations.Add(new Vector3(-1.301f, 0.201f, 5.722f));
-        foodLocations.Add(new Vector3(4.4741f, 1.264f, 3.816f));
+        foodLocations.Add(new Vector3(4.618f, 1.31f, 4.224f)); //dining table
         foodLocations.Add(new Vector3(5.397f, 0.2f, -4.872214f)); // closet near bedroom
         foodLocations.Add(new Vector3(-6.067554f, 1.527f, -0.2253566f)); //computer table
         foodLocations.Add(new Vector3(3.839324f, 0.265f, 7.453134f));// closet near kitchen
@@ -49,7 +49,7 @@ public class FoodSpawner : MonoBehaviour
         foodLocations.Add(new Vector3(-0.197128f, 0.341f, -9.097137f)); //master bedroom closet
         foodLocations.Add(new Vector3(-6.721f, 1.3278f, -4.52f)); //master bedroom cupboard
         foodLocations.Add(new Vector3(-2.9821f, 0.91f, 6.733f)); //kitchen oven
-        foodLocations.Add(new Vector3(3.130547f, 0.852f, -10.616f)); //bathroom drawer
+        foodLocations.Add(new Vector3(-7.691849f, 0.26f, 2.511965f)); //living room corner
         foodLocations.Add(new Vector3(-7.42775f, 0.274f, -7.982955f)); //master bedroom floor
 
         // Create a list of occupied locations equal to number of food locations

@@ -8,6 +8,7 @@ TagManager:
   - BadFood
   - Particle
   - SoundManager
+  - GameManager
   layers:
   - Default
   - TransparentFX

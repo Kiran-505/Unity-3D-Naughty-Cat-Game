@@ -7,7 +7,8 @@ public class SoundManager : MonoBehaviour
     private AudioSource playerAudio;
 
     public AudioClip jumpSound;
-    public AudioClip foodSound;
+    public AudioClip goodFoodSound;
+    public AudioClip badFoodSound;
 
     public float soundVolume = 0.5f;
 
@@ -28,8 +29,13 @@ public class SoundManager : MonoBehaviour
         playerAudio.PlayOneShot(jumpSound, soundVolume);
     }
 
-    public void PlayFoodSound()
+    public void PlayGoodFoodSound()
     {
-        playerAudio.PlayOneShot(foodSound, soundVolume);
+        playerAudio.PlayOneShot(goodFoodSound, soundVolume);
+    }
+
+    public void PlayBadFoodSound()
+    {
+        playerAudio.PlayOneShot(badFoodSound, soundVolume);
     }
 }

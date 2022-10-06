@@ -32,6 +32,9 @@ public class ThirdPersonMovement : MonoBehaviour
     //Makes it so that you can add a jump sound
     public SoundManager soundManager;
 
+    // Game manager
+    public GameManager gameManager;
+
     //Adds particles when jumping
     public ParticleSystem jumpParticles;
 
@@ -41,12 +44,17 @@ public class ThirdPersonMovement : MonoBehaviour
         controller = GetComponent<CharacterController>();
         animator.speed = animationSpeed;
         soundManager = GameObject.FindGameObjectWithTag("SoundManager").GetComponent<SoundManager>();
+        gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        if (gameManager.GameOver())
+        {
+            Debug.Log("Game Over");
+            return;
+        }
         // Check if player collides with the ground
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
