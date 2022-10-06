@@ -7,6 +7,7 @@ TagManager:
   - GoodFood
   - BadFood
   - Particle
+  - SoundManager
   layers:
   - Default
   - TransparentFX

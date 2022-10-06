@@ -30,16 +30,14 @@ public class ThirdPersonMovement : MonoBehaviour
     public bool isEating = false;
 
     //Makes it so that you can add a jump sound
-    public AudioClip jumpSound;
-    private AudioSource playerAudio;
+    public SoundManager soundManager;
 
     // Start is called before the first frame update
     void Start()
     {
         controller = GetComponent<CharacterController>();
         animator.speed = animationSpeed;
-        playerAudio = GetComponent<AudioSource>();
-
+        soundManager = GameObject.FindGameObjectWithTag("SoundManager").GetComponent<SoundManager>();
     }
 
     // Update is called once per frame
@@ -72,7 +70,7 @@ public class ThirdPersonMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -1.0f * gravity);
-            playerAudio.PlayOneShot(jumpSound, 1.0f);
+            soundManager.PlayJumpSound();
         }
 
 
