@@ -53,6 +53,7 @@ public class ThirdPersonMovement : MonoBehaviour
         if (gameManager.GameOver())
         {
             Debug.Log("Game Over");
+            gameManager.ShowGameOverScreen();
             return;
         }
         // Check if player collides with the ground
@@ -79,7 +80,7 @@ public class ThirdPersonMovement : MonoBehaviour
 
         //Adds physics to jumping
 
-        if (Input.GetButtonDown("Jump") && isGrounded)
+        if (Input.GetButtonDown("Jump") && isGrounded && !isEating)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -1.0f * gravity);
             soundManager.PlayJumpSound();

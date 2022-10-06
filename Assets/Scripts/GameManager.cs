@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -8,16 +9,20 @@ public class GameManager : MonoBehaviour
     private int currentLives;
     private bool gameOver = false;
 
+    private UIManager uiManager;
+
+
     // Start is called before the first frame update
     void Start()
     {
+        uiManager = GameObject.FindGameObjectWithTag("UIManager").GetComponent<UIManager>();
         ResetGame();
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
     public void ResetGame()
@@ -32,10 +37,8 @@ public class GameManager : MonoBehaviour
         {
             gameOver = true;
         }
-        else
-        {
-            currentLives--;
-        }
+        currentLives--;
+        uiManager.SetLivesImage(currentLives);
     }
 
     public bool GameOver()
@@ -43,4 +46,13 @@ public class GameManager : MonoBehaviour
         return gameOver;
     }
 
+    public int RemainingLives()
+    {
+        return currentLives;
+    }
+
+    public void ShowGameOverScreen()
+    {
+        uiManager.ShowGameOverScreen();
+    }
 }

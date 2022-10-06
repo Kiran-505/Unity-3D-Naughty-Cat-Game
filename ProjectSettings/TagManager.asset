@@ -9,6 +9,8 @@ TagManager:
   - Particle
   - SoundManager
   - GameManager
+  - FxTemporaire
+  - UIManager
   layers:
   - Default
   - TransparentFX
