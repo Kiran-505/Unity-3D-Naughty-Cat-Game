@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     private int currentLives;
     private int currentGoodFoodCount;
     private bool gameOver = false;
+    private bool won = false;
 
     private UIManager uiManager;
 
@@ -67,7 +68,7 @@ public class GameManager : MonoBehaviour
     // Show the gameover screen using UI manager
     public void ShowGameOverScreen()
     {
-        uiManager.ShowGameOverScreen();
+        uiManager.ShowGameOverScreen(won);
     }
 
     // Increment good food count and update the score
@@ -76,6 +77,7 @@ public class GameManager : MonoBehaviour
         currentGoodFoodCount++;
         if (currentGoodFoodCount == GoodFoodCount)
         {
+            won = true;
             gameOver = true;
         }
         uiManager.SetScore(currentGoodFoodCount);

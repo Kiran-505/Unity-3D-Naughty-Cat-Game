@@ -10,6 +10,7 @@ public class UIManager : MonoBehaviour
     public Sprite[] livesSprites;
 
     public GameObject gameOverObject;
+    public GameObject winningScreenObject;
     public TextMeshProUGUI scoreText;
 
     // Start is called before the first frame update
@@ -38,9 +39,16 @@ public class UIManager : MonoBehaviour
     }
 
     // Show the gameover image when the game is over
-    public void ShowGameOverScreen()
+    public void ShowGameOverScreen(bool won)
     {
-        gameOverObject.SetActive(true);
+        if(won)
+        {
+            winningScreenObject.SetActive(true);
+        }
+        else
+        {
+            gameOverObject.SetActive(true);
+        }
     }
 
     // Set the current score as text when it gets updated
