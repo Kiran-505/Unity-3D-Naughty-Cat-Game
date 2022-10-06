@@ -6,10 +6,14 @@ public class EatingFood : MonoBehaviour
 {
     public ThirdPersonMovement player;
     public int eatingDuration = 3;
+
+    public AudioClip eatingSound;
+    private AudioSource playerAudio;
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<ThirdPersonMovement>();
+        playerAudio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -27,6 +31,7 @@ public class EatingFood : MonoBehaviour
             Debug.Log(other.gameObject.tag);
             Destroy(other.gameObject);
             StartCoroutine(WaitAndDeleteFood());
+            playerAudio.PlayOneShot(eatingSound, 2.0f);
         }
     }
 
